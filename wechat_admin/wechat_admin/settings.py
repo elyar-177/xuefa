@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-_!c6$-qdsqr=gcm#^a=ro1t9fg
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
 # 允许的主机名
-ALLOWED_HOSTS = ['*', '.vercel.app']
+ALLOWED_HOSTS = ['*', '.onrender.com']
 
 # Application definition
 
