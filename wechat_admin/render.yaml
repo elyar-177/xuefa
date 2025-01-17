@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: wechat-admin
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn wechat_admin.wsgi:application
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: WX_APP_ID
+        value: wx4da605ed0f30f980
+      - key: WX_APP_SECRET
+        value: 96454fcd2ab2897d4ce9f5b647db0db4
+      - key: ALLOWED_HOSTS
+        value: .onrender.com
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: wechat_admin_db
+          property: connectionString
+
+databases:
+  - name: wechat_admin_db
+    plan: free
