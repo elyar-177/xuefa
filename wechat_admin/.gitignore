@@ -31,6 +31,7 @@ staticfiles/
 # Virtual Environment
 venv/
 ENV/
+.env
 
 # IDE
 .idea/
@@ -41,3 +42,9 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Development
+run_with_ngrok.py
+ngrok.exe
+.coverage
+htmlcov/
